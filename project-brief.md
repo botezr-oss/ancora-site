@@ -1,11 +1,11 @@
-# Recalibrare — Project brief
+# Anchor — Project brief
 
 Rezumat al deciziilor luate până acum, util ca punct de referință când continui
 lucrul în VS Code (sau cu Claude Code).
 
 ## Ce este site-ul
 
-Site de prezentare pentru Recalibrare — brandul de coaching al Roxanei, orientat
+Site de prezentare pentru Anchor — brandul de coaching al Roxanei, orientat
 spre persoane care conduc (manageri, fondatori de startup-uri, team leads),
 indiferent de țară sau titlu. Conținutul e în engleză (audiența validată e
 internațională: Germania, US, India, UK etc.), nu în română.
