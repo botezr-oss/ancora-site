@@ -1,0 +1,252 @@
+/* =====================================================
+   VARIABILE — paleta de culori și valori reutilizabile.
+   Le definim o singură dată aici, apoi le folosim oriunde
+   cu var(--nume). Dacă vrei să schimbi o culoare în tot
+   site-ul, o schimbi într-un singur loc.
+   ===================================================== */
+:root {
+  --paper: #EDEAE3;       /* fundal principal — gri-bej cald */
+  --paper-soft: #F6F4EF;  /* fundal pentru carduri, puțin mai deschis */
+  --ink: #25241F;         /* text principal — negru cald */
+  --ink-soft: #6E6A60;    /* text secundar, mai discret */
+  --moss: #46563E;        /* accent principal — verde-mușchi */
+  --clay: #B8704A;        /* accent pentru acțiuni — folosit cu măsură */
+  --line: #D8D2C6;        /* linii și separatoare discrete */
+
+  --radius: 6px;
+  --max-width: 760px;
+}
+
+/* =====================================================
+   RESET DE BAZĂ — uniformizăm comportamentul browserului
+   ===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+a {
+  color: var(--moss);
+}
+
+/* =====================================================
+   HEADER — bară de navigare simplă
+   ===================================================== */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+}
+
+.logo {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.nav a:hover {
+  color: var(--moss);
+}
+
+/* =====================================================
+   LAYOUT GENERAL — fiecare secțiune e centrată și are
+   o lățime maximă, ca textul să fie lizibil
+   ===================================================== */
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.section p {
+  margin-bottom: 1.1rem;
+  color: var(--ink-soft);
+  max-width: 620px;
+}
+
+.section p:last-child {
+  margin-bottom: 0;
+}
+
+/* =====================================================
+   HERO — prima secțiune, mai mare și centrată
+   ===================================================== */
+.hero {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  max-width: 600px;
+  margin: 0 auto 1.25rem;
+}
+
+.hero-sub {
+  color: var(--ink-soft);
+  max-width: 520px;
+  margin: 0 auto 2rem;
+}
+
+.hero-note {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  font-style: italic;
+  max-width: 480px;
+  margin: 0 auto 1.5rem;
+}
+
+/* =====================================================
+   BUTOANE
+   ===================================================== */
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: opacity 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--clay);
+  color: var(--paper-soft);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* Secțiunea de contact are CTA-urile aliniate la stânga, ca restul textului */
+.section-contact .cta-group {
+  justify-content: flex-start;
+}
+
+/* =====================================================
+   DIVIDER — elementul de semnătură: o riglă de calibrare
+   cu un reper evidențiat în mijloc
+   ===================================================== */
+.divider {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 14px;
+  margin: 4rem 0;
+}
+
+.divider span {
+  width: 2px;
+  height: 14px;
+  background: var(--line);
+}
+
+.divider .divider-mark {
+  width: 3px;
+  height: 30px;
+  background: var(--clay);
+}
+
+/* =====================================================
+   CARDURI — pentru cele două servicii
+   ===================================================== */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--paper-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.9rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  max-width: none;
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+.site-footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+/* =====================================================
+   RESPONSIVE — sub 700px, cardurile se pun una sub alta
+   ===================================================== */
+@media (max-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .section-contact .cta-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
