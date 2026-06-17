@@ -1,11 +1,11 @@
-# Anchor — Project brief
+# Ancora — Project brief
 
 Rezumat al deciziilor luate până acum, util ca punct de referință când continui
 lucrul în VS Code (sau cu Claude Code).
 
 ## Ce este site-ul
 
-Site de prezentare pentru Anchor — brandul de coaching al Roxanei, orientat
+Site de prezentare pentru Ancora — brandul de coaching al Roxanei, orientat
 spre persoane care conduc (manageri, fondatori de startup-uri, team leads),
 indiferent de țară sau titlu. Conținutul e în engleză (audiența validată e
 internațională: Germania, US, India, UK etc.), nu în română.
@@ -49,7 +49,9 @@ secțiuni: Hero, About, Who it's for, Services (2 carduri), Contact, Footer.
     spre program.
   - *Recalibration program* — minim 3 ședințe (poate continua dacă e nevoie),
     primele 2 săptămânale, a treia la 2 săptămâni. Rezultat: problema devine
-    "loc cu mai multe soluții posibile".
+    "loc cu mai multe soluții posibile". Procesul începe cu coaching (clientul
+    găsește propriile soluții); dacă situația o cere, Roxana introduce
+    mentorship (experiență proprie aplicată pe contextul specific).
 - **Contact**: două CTA-uri — programare directă (Calendly/Cal.com) și mesaj
   pe LinkedIn pentru cei care vor mai întâi o conexiune informală.
 
@@ -58,13 +60,13 @@ secțiuni: Hero, About, Who it's for, Services (2 carduri), Contact, Footer.
 - [ ] Înlocuiește cele 4 link-uri `href="#"` din zona de contact cu:
       - link-ul real de Calendly/Cal.com
       - link-ul de profil LinkedIn
+- [ ] Articole — scrise și traduse în engleză, fișierele să fie create în
+      folderul `articles/` (ex: `articles/how-to-recalibrate.html`)
+- [ ] Logo — fotografiază schița de mână pe hârtie albă cu marker negru,
+      vectorizează pe vectorizer.ai, integrează în header în locul textului
+      "Ancora"
 - [ ] (Opțional, mai târziu) Variantă în română — copiezi `index.html` într-un
       `index-ro.html` sau folder `/ro/`, traduci, adaugi switch RO/EN în header.
-- [ ] Verifică spațierea din meniul de navigare (About / Services / Contact) —
-      ar trebui să fie spațiate (gap în `.nav`); a apărut o anomalie într-un
-      instrument de preview, posibil fără relevanță în browser real.
-- [ ] (Opțional) "Rigla de calibrare" e momentan discretă — de mărit/accentuat
-      dacă vrei să fie mai prezentă vizual.
 
 ## Cum continui în VS Code
 
