@@ -360,6 +360,12 @@ a {
   max-width: none;
 }
 
+.review-author {
+  color: var(--ink-soft);
+  font-style: italic;
+  margin-top: 1rem;
+}
+
 /* =====================================================
    FOOTER
    ===================================================== */
