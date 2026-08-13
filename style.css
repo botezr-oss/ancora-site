@@ -62,10 +62,11 @@ a {
   text-decoration: none;
   display: flex;
   align-items: center;
+  margin-right: 1rem;
 }
 
 .logo img {
-  height: 40px;
+  height: 48px;
   width: auto;
 }
 
