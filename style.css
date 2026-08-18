@@ -396,6 +396,108 @@ a {
 }
 
 /* =====================================================
+   SERVICES GRID — 4-column responsive pricing cards
+   ===================================================== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: var(--paper-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.service-card:hover {
+  border-color: var(--moss);
+  box-shadow: 0 8px 20px rgba(70, 86, 62, 0.08);
+}
+
+.service-card-featured {
+  background: linear-gradient(135deg, var(--paper-soft) 0%, rgba(184, 112, 74, 0.05) 100%);
+  border: 2px solid var(--clay);
+  transform: scale(1.02);
+}
+
+.service-card-featured:hover {
+  border-color: var(--clay);
+  box-shadow: 0 12px 28px rgba(184, 112, 74, 0.12);
+  transform: scale(1.04);
+}
+
+.service-badge {
+  position: absolute;
+  top: -12px;
+  right: 1.75rem;
+  background: var(--clay);
+  color: var(--paper-soft);
+  padding: 0.4rem 0.9rem;
+  border-radius: 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.service-header {
+  margin-bottom: 1rem;
+}
+
+.service-header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--ink);
+}
+
+.service-duration {
+  font-size: 0.85rem;
+  color: var(--moss);
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.service-price {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--clay);
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.service-description {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.service-note {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  font-style: italic;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.btn-service {
+  align-self: flex-start;
+  margin-top: auto;
+  font-size: 0.9rem;
+  padding: 0.65rem 1.2rem;
+}
+
+/* =====================================================
    FOOTER
    ===================================================== */
 .site-footer {
@@ -409,13 +511,51 @@ a {
 /* =====================================================
    RESPONSIVE — sub 700px, cardurile se pun una sub alta
    ===================================================== */
+/* =====================================================
+   RESPONSIVE — Tablet (max 1024px): 2x2 grid for services
+   ===================================================== */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-card-featured {
+    transform: scale(1.01);
+  }
+
+  .service-card-featured:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* =====================================================
+   RESPONSIVE — Mobile (max 700px): 1 column
+   ===================================================== */
 @media (max-width: 700px) {
   .hero-grid,
   .section-media,
   .brand-grid,
   .articles-list,
-  .cards {
+  .cards,
+  .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card-featured {
+    transform: scale(1);
+  }
+
+  .service-card-featured:hover {
+    transform: scale(1);
+  }
+
+  .service-badge {
+    top: 1rem;
+    right: 1rem;
   }
 
   .hero-copy,
