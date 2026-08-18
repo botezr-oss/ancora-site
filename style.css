@@ -412,6 +412,8 @@ a {
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-between; /* + Distribuie conținutul uniform și împinge butoanele jos */
+  height: 100%;                   /* + Forțează toate cardurile să aibă exact aceeași înălțime */
   position: relative;
   transition: all 0.2s ease;
 }
@@ -485,7 +487,7 @@ a {
 .service-note {
   font-size: 0.85rem;
   color: var(--ink-soft);
-  font-style: italic;
+  /* font-style: italic; */
   margin-bottom: 1.25rem;
   line-height: 1.5;
 }
